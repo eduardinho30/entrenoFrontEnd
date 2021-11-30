@@ -1,0 +1,124 @@
+html {
+    height: 100%;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* body {
+    
+} */
+
+/* ================== GENERAL GRID LAYOUT ==================== */
+#grid {
+    display: grid;
+    grid-template-areas:    'upHead upHead'
+                            'sectionContainer sectionContainer'
+                            'finalInfo finalInfo';
+    grid-template-columns: 50% 50% ;
+    grid-template-rows: 120px 620px 80px;
+    background-image: url(../img/backgroundProyect3.png);
+}
+
+/* ================== GENERAL HEAD ==================== */
+.upHead {
+    grid-area: upHead;
+    display: grid;
+    grid-template-areas: 'inHead navBar';
+    grid-template-columns: 50% 50%;
+    /* BLUR EFFECT */
+    backdrop-filter: blur(15px);
+    background-color: rgb(255, 255, 255, 0.05);
+    box-shadow: 0px 0px 17px 0px;
+}
+    .inHead {
+        grid-area: inHead;
+        padding-left: 4em;  
+        padding-top: 1em;
+        font-size: 24px;
+    }
+    .navBar {
+        grid-area: navBar;
+        display: grid;
+        grid-template-areas: 'b1 b2 b3 b4';
+        grid-template-columns: 25% 25% 25% 25%;
+        text-align: center;
+        padding-top: 2.5em;
+        font-size: 18px;
+        letter-spacing: 1px;
+    }
+        .b1 {
+            grid-area: b1;
+        }
+        .b2 {
+            grid-area: b2;
+        }
+        .b3 {
+            grid-area: b3;
+        }
+        .b4 {
+            grid-area: b4;
+        }      
+
+/* ==================== CONTENT ======================= */
+.sectionContainer {
+    grid-area: sectionContainer;
+    display: grid;
+    grid-template-areas: 'section1 image';
+    grid-template-columns: 50% 50%;
+}
+    .section1 {
+        grid-area: section1;
+        padding-left: 5em;
+        padding-top: 9em;
+        font-size: 18px;
+        letter-spacing: 1px;
+    }
+        .sectionTitle {
+            font-family: 'Inter', sans-serif;
+            font-size: 50px;
+            padding-bottom: 15px;
+        }
+
+    .image {
+        grid-area: image;
+        padding-top: 3em;
+        padding-left: 5em;
+    }
+
+/* ===================== FOOTER ======================= */
+.finalInfo {
+    grid-area: finalInfo;
+    text-align: center;
+    padding-top: 2em;
+    /* BLUR EFFECT */
+    backdrop-filter: blur(10px);
+    background-color: rgb(255, 255, 255, 0.05);
+    letter-spacing: 1.5px;
+    box-shadow: 0px 0px 17px 0px;
+}
+
+/* @media (min-width: 768px) {
+    #grid {
+        grid-template-areas: 
+            "upHead"
+            "sectionContainer"
+            "finalInfo";
+    }
+    .upHead {
+        grid-template-areas: 
+            "inHead"
+            "navBar";
+    }
+} */
+
+
+/* @media screen (max-width: 600px) {
+    .grid {
+    }
+} */
+/* FLEXBOX PARA CENTRAR ELEMENTOS DE MANERA MAS ADECUADA */
+/* display: flex;
+align-items: center;
+justify-content: center; */

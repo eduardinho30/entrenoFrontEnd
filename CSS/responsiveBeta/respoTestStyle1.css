@@ -1,0 +1,233 @@
+* {
+    /* box-sizing: border-box; */
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    min-height: 100%;
+    background-image: url(../img/backgroundProyect3.png);
+}
+html {
+    height: 100%;
+}
+
+/* ================== GENERAL GRID LAYOUT ==================== */
+.bigContainer > * {
+    padding: 10px;
+    text-align: center;
+}
+.bigContainer {
+    display: grid;
+    grid-template: 
+        "head" 100px
+        "content" auto
+        "pie" 85px;
+}
+
+/* ================== GENERAL HEAD ==================== */
+.head {
+    grid-area: head;
+    display: grid;
+    grid-template: 
+        "subHead barra" 100%/
+        50%   50%;
+    background-color:  #5e99ed ;
+
+    /* BLUR EFFECT */
+    /* filter: blur(10px);
+    position: absolute;
+    z-index: -1; */
+    /* backdrop-filter: blur(100px);
+    background-color: rgb(255, 255, 255, 0.3);
+    -webkit-backdrop-filter: blur(100px); */
+    /* ------------------- */
+    box-shadow: 0px 0px 13px 0px;
+    display: flexbox;
+    align-items: center;
+}
+    /* TITTLE */
+    .subHead {
+        grid-area: subHead;
+        font-family:'Inter', sans-serif;
+        letter-spacing: 1px;
+        font-size: 20px;
+    }
+    /* NAVIGATION BAR */
+    .barra {
+        grid-area: barra;
+        display: grid;
+        grid-template:
+            "b1 b2 b3 b4" 100%/
+            25% 25% 25% 25%;
+        font-family: 'Inter', sans-serif;
+        font-size: 17px;    
+        letter-spacing: 0.7px;
+    }
+
+/* ==================== CONTENT ======================= */
+.content {
+    grid-area: content;
+    display: grid;
+    grid-template: 
+        "text img1" 100%/
+        50%   50%;
+    display: flexbox;
+    align-items: center;
+}   
+    /* ARTICLE TITTLE */
+    /* add a box for the article */
+    .articleTittle {
+        font-family:'Inter', sans-serif;
+        letter-spacing: 1px;
+        font-size: 50px;
+        padding-bottom: 25px;
+    }
+    /* ARTICLE PARAGRAPH */
+    article {
+        font-family:'Inter', sans-serif;
+        letter-spacing: 1px;
+        font-size: 18px;
+        text-align: center;
+        margin-left: 3em;
+        margin-right: 3em;
+    }
+
+/* ===================== FOOTER ======================= */
+.pie {
+    grid-area: pie;
+    font-family:'Inter', sans-serif;
+    letter-spacing: 1px;
+    font-size: 20px;
+    background-color:  #5e99ed ;
+    box-shadow: 0px 0px 13px 1px black;
+    padding-top: 1em;
+}
+/* ==================================================== */
+
+
+
+/* ================ GENERAL RESPONSIVE DESIGN ================= */
+@media (max-width: 600px) {
+
+    .bigContainer {
+        grid-template: 
+            "head" 120px
+            "content" auto
+            "pie" 70px/
+            100%;
+    }
+
+    /* ================== GENERAL HEAD ==================== */
+    .head {
+        grid-template: 
+            "subHead" 65%
+            "barra" 45% /
+            100%;
+        text-align: center;
+    }
+    
+    /* ==================== CONTENT ======================= */
+    .content {
+        grid-template: 
+            "text" 50%
+            "img1" 50% /
+            100%;
+    }   
+        /* ARTICLE */
+        .articleTittle {
+            text-align: center;
+            padding-top: 0.7em;
+        }
+        article {
+            padding: 0px;
+            margin: 10px;
+            text-align: center;
+        }
+        
+        /* IMAGE CONTAINER */
+        .img1 {
+            display: flexbox;
+            align-items: center;
+            margin: 1em;
+        }
+        img {
+            width: 350px;
+        }
+
+    /* ===================== FOOTER ======================= */
+    .pie {
+        padding-top: 0.7em;
+    }
+}
+/* ==================================================== */
+
+
+
+/* ================ RESPONSIVE DESIGN FOR IPAD ================= */
+@media (max-width: 815px) {
+
+    .bigContainer {
+        grid-template: 
+            "head" 120px
+            "content" auto
+            "pie" 70px/
+            100%;
+    }
+
+    /* ================== GENERAL HEAD ==================== */
+    .head {
+        grid-template: 
+            "subHead" 65%
+            "barra" 45% /
+            100%;
+        text-align: center;
+    }
+    
+    /* ==================== CONTENT ======================= */
+    .content {
+        grid-template: 
+            "text" 40%
+            "img1" 60% /
+            100%;
+    }   
+        /* ARTICLE */
+        .text {
+            padding-top: 0px;
+        }
+        .articleTittle {
+            text-align: center;
+            /* padding-top: 0.7em; */
+        }
+        article {
+            padding: 0px;
+            margin: 10px;
+            text-align: center;
+        }
+        
+        /* IMAGE CONTAINER */
+        .img1 {
+            padding-bottom: 5em;
+            display: flexbox;
+            align-items: center;
+            margin: 1em;
+        }
+        img {
+            height: 500px;
+        }
+
+    /* ===================== FOOTER ======================= */
+    .pie {
+        padding-top: 0.7em;
+    }
+}
+/* ==================================================== */
+
+/* ================ STYLES THAT I HAVE TO FIX ================== */
+/* 1. fix blur effect on the headbar
+ BLUR EFFECT *arreglar*
+backdrop-filter: blur(10px);
+background-color: rgb(255, 255, 255, 0.05); */
+
+/* 2. fix top space on the title of the articlr */
+/* 3. fix responsive designe for iphone SE2 */
+/* ============================================================ */
